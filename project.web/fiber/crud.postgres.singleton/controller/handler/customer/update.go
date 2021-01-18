@@ -5,7 +5,7 @@ import (
 
 	mErrors "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/errors"
 
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/fmts"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
 	rcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/repo/customer"
 )

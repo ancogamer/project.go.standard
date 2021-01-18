@@ -3,16 +3,16 @@ package rcustomer
 import (
 	"errors"
 
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/fmts"
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/psql"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
 )
 
+// Update ..
 func Update(customer mcustomer.Customer) error {
 	db := db.Connect()
-	//Those ones that are not here on the insert, are default fields
+	// O ideal, seria limpar os valores de insert antes de concatenar eles na string de sql.
 	sqlexec := `UPDATE ad_customer SET imp_user_update = $1`
-
 	if customer.ImpStatus != 0 && customer.ImpStatus == 1 || customer.ImpStatus == 2 {
 		sqlexec = fmts.Concat(sqlexec, ", imp_status = ", customer.ImpStatus, "")
 	} else {

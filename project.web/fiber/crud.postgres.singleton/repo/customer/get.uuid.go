@@ -3,11 +3,12 @@ package rcustomer
 import (
 	"encoding/json"
 
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/psql"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
 )
 
-func GetUuid(uuid string) (string, error) {
+// GetUUID ..
+func GetUUID(uuid string) (string, error) {
 	db := db.Connect()
 	var customer mcustomer.Customer
 	sqlexec := `

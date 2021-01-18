@@ -1,14 +1,11 @@
 package rcustomer
 
 import (
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/psql"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
 )
-
-func Post(customer mcustomer.Customer) error {
-	//ainda sendo feito
-	db := db.Connect()
-	//Those ones that are not here on the insert, are default fields
+// Post ..
+func Post(db customer mcustomer.Customer) error {
 	sqlexec := `insert 
 	into ad_customer(
 		imp_ip,

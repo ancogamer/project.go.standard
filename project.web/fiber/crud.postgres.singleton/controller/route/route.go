@@ -10,7 +10,7 @@ import (
 )
 
 //
-func AllRoutes(app *fiber.App) {
+func AllRoutes(db dbStruct, app *fiber.App) {
 	////
 	app.Use(cors.New())
 	app.Use(mw.Compress(mw.CompressLevelBestSpeed))

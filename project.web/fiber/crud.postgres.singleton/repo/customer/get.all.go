@@ -3,8 +3,8 @@ package rcustomer
 import (
 	"encoding/json"
 
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/fmts"
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/psql"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
 )
 

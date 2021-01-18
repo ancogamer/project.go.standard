@@ -3,9 +3,10 @@ package rcustomer
 import (
 	"errors"
 
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.singleton/psql"
 )
 
+// Delete ..
 func Delete(uuid string) error {
 	db := db.Connect()
 	//Those ones that are not here on the insert, are default fields
